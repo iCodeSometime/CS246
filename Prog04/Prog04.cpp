@@ -137,6 +137,7 @@ void shape::fatal_error(char *name, int error_code)
         << " function.";
    cout << "\nUnable to allocate memory for the shapes name.";
    cout << "\nThe program is aborting";
+   exit(error_code);
 }
 
 //**********************************************************************
@@ -183,6 +184,7 @@ void right_triangle::show_shape()
    cout << "\nLength of hypotenuse:      "   << hypoteneuse;
    cout << "\nArea:                      "   << get_area();
    cout << "\nPerimeter:                 "   << get_perimeter();
+   return;
 }
 
 //**********************************************************************
@@ -223,6 +225,7 @@ void square::show_shape()
    cout << "\nLength of a side:          "   << side;
    cout << "\nArea:                      "   << get_area();
    cout << "\nPerimeter:                 "   << get_perimeter();
+   return;
 }
 
 //**********************************************************************
@@ -266,6 +269,7 @@ void rectangle::show_shape()
    cout << "\nLength of height:          "   << height;
    cout << "\nArea:                      "   << get_area();
    cout << "\nPerimeter:                 "   << get_perimeter();
+   return;
 }
 
 //**********************************************************************
