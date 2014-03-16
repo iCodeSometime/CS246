@@ -159,8 +159,8 @@ right_triangle::right_triangle(char *new_name, float new_base,
    else
    {
       strcpy_s(name, strlen(new_name) + 1, new_name);
-      base        = new_base;
-      height      = new_height;
+      base   = new_base;
+      height = new_height;
       set_total_sides(3);
       set_unique_sides(3);
       hypoteneuse = sqrt(pow(base, 2) + pow(height, 2));
