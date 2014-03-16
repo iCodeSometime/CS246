@@ -163,7 +163,7 @@ right_triangle::right_triangle(char *new_name, float new_base,
       height = new_height;
       set_total_sides(3);
       set_unique_sides(3);
-      hypoteneuse = sqrt(pow(base, 2) + pow(height, 2));
+      hypoteneuse = sqrt(base * base + height * height);
       set_perimeter(base + height + hypoteneuse);
       set_area(0.5f * base * height);
    }
