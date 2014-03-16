@@ -1,3 +1,5 @@
+//TODO: 299
+
 //**********************************************************************
 //*                                                                    *
 //* Program Name: Prog04 - Manage straight sided geometric shapes      *
@@ -283,6 +285,8 @@ void print_heading();
 //**********************************************************************
 int main()
 {
+   shape *p_shape;
+
    // Print heading
    print_heading();
 
@@ -292,9 +296,17 @@ int main()
    rectangle      rectangle_object("RECTANGLE-1", 11.99f, 5.99f);
 
    // Print the specifications of the straight sided geometric shapes
-   triangle_object.show_shape();
-   square_object.show_shape();
-   rectangle_object.show_shape();
+
+   //TODO: check pages 444-445 to make sure this is what Howell wants.
+   // For future reference, if this is what he wants, it is dumb.
+   p_shape = &triangle_object;
+   p_shape->show_shape();
+
+   p_shape = &square_object;
+   p_shape->show_shape();
+
+   p_shape = &rectangle_object;   
+   p_shape->show_shape();
 
    // Say goodbye and terminate
    cout << "\n\n\nThanks for shaping things up.";
