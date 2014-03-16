@@ -27,8 +27,8 @@
 
 //**********************************************************************
 //*                                                                    *
-//* This program displays the specifications for a triangle, square,   *
-//* and rectangle                                                      *
+//* This program calculates and displays the specifications for a      *
+//* triangle, square, and rectangle                                    *
 //*                                                                    *
 //**********************************************************************
 
