@@ -207,7 +207,7 @@ square::square(char *new_name, float new_side)
       side = new_side;
       set_total_sides(4);
       set_unique_sides(1);
-      set_area(pow(side, 2));
+      set_area(side * side);
       set_perimeter(side * 4.0f);
    }
 }
