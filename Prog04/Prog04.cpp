@@ -33,10 +33,10 @@
 //**********************************************************************
 
 #include "stdafx.h"
-#include <iostream>
+#include <cmath>
 #include <cstdlib>
 #include <cstring>
-#include <cmath>
+#include <iostream>
 using namespace std;
 
 //**********************************************************************
