@@ -53,7 +53,7 @@ using namespace std;
 //**********************************************************************
 //*                       Base Class Definition                        *
 //**********************************************************************
-// A generic stright sided geometric shape
+// A generic straight sided geometric shape
 class shape
 {
    int   total_sides,  // Total number of sides
