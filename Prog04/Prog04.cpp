@@ -91,9 +91,9 @@ class right_triangle: public shape
          hypoteneuse; // Hypoteneuse of the triangle
 public:
    // Create a right trianlge
-   right_triangle(char *new_name, float new_base, float new_height);
+        right_triangle(char *new_name, float new_base, float new_height);
    // Delete a right triangle
-   ~right_triangle() {free(name);}
+        ~right_triangle() {free(name);}
    // Print the specifications of the right triangle
    void show_shape();
 };
@@ -105,9 +105,9 @@ class square: public shape
    float side;  // Length of each side of the square
 public:
    // Create a square
-   square(char *new_name, float new_side);
+        square(char *new_name, float new_side);
    // Delete a square
-   ~square() {free(name);}
+        ~square() {free(name);}
    // Print the specifications of the square
    void show_shape();
 };
@@ -120,9 +120,9 @@ class rectangle: public shape
          height; // Height of the rectangle
 public:
    // Create a rectangle
-   rectangle(char *new_name, float new_base, float new_height);
+        rectangle(char *new_name, float new_base, float new_height);
    // Delete a rectangle
-   ~rectangle() {free(name);}
+        ~rectangle() {free(name);}
    // Print the specifications of the rectangle
    void show_shape();
 };
