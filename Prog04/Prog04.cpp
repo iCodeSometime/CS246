@@ -177,7 +177,7 @@ right_triangle::right_triangle(char *new_name, float new_base,
 void right_triangle::show_shape()
 {
    cout << "\n\n\nThe specifications of a right triangle shape are:";
-   cout << "\n-------------------------------------------------";
+   cout <<     "\n-------------------------------------------------";
    cout << "\nName of the shape:         \"" << name << "\"";
    cout << "\nTotal number of sides:     "   << get_total_sides();
    cout << "\nNumber of unique sides:    "   << get_unique_sides();
@@ -220,7 +220,7 @@ square::square(char *new_name, float new_side)
 void square::show_shape()
 {
    cout << "\n\n\nThe specifications of a square shape are:";
-   cout << "\n-----------------------------------------";
+   cout <<     "\n-----------------------------------------";
    cout << "\nName of the shape:         \"" << name << "\"";
    cout << "\nTotal number of sides:     "   << get_total_sides();
    cout << "\nNumber of unique sides:    "   << get_unique_sides();
@@ -263,7 +263,7 @@ rectangle::rectangle(char *new_name, float new_base, float new_height)
 void rectangle::show_shape()
 {
    cout << "\n\n\nThe specifications of a rectangle shape are:";
-   cout << "\n--------------------------------------------";
+   cout <<     "\n--------------------------------------------";
    cout << "\nName of the shape:         \"" << name << "\"";
    cout << "\nTotal number of sides:     "   << get_total_sides();
    cout << "\nNumber of unique sides:    "   << get_unique_sides();
