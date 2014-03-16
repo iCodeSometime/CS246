@@ -86,9 +86,9 @@ public:
 class right_triangle: public shape
 {
    char  *name;       // Name of the triangle
-   float hypoteneuse, // Hypoteneuse of the triangle
-         base,        // Base of the triangle
-         height;      // Height of the triangle
+   float base,        // Base of the triangle
+         height,      // Height of the triangle
+         hypoteneuse; // Hypoteneuse of the triangle
 public:
    // Create a right trianlge
    right_triangle(char *new_name, float new_base, float new_height);
