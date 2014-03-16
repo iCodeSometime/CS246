@@ -285,7 +285,7 @@ void print_heading();
 //**********************************************************************
 int main()
 {
-   shape *p_shape;
+   shape *p_shape; // Points to each object derived from shape
 
    // Print heading
    print_heading();
