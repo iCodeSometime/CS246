@@ -75,7 +75,7 @@ public:
    float get_perimeter   () {return perimeter;}
 
    // Fatal error message
-   void fatal_error(char name[], int error_code);
+   void fatal_error(char *name, int error_code);
 };
 
 
