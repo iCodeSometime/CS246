@@ -159,13 +159,13 @@ right_triangle::right_triangle(char *new_name, float new_base,
    else
    {
       strcpy_s(name, strlen(new_name) + 1, new_name);
-      base   = new_base;
-      height = new_height;
+      base        = new_base;
+      height      = new_height;
+      hypoteneuse = sqrt(base * base + height * height);
       set_total_sides(3);
       set_unique_sides(3);
-      hypoteneuse = sqrt(base * base + height * height);
-      set_perimeter(base + height + hypoteneuse);
       set_area(0.5f * base * height);
+      set_perimeter(base + height + hypoteneuse);
    }
 }
 
@@ -207,8 +207,8 @@ square::square(char *new_name, float new_side)
       side = new_side;
       set_total_sides(4);
       set_unique_sides(1);
-      set_perimeter(side * 4.0f);
       set_area(pow(side, 2));
+      set_perimeter(side * 4.0f);
    }
 }
 
