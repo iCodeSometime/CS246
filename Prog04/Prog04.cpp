@@ -44,9 +44,9 @@ using namespace std;
                                    // PCC assigned course name
 #define COURSE_NUMBER      "CS246" // PCC assigned course number
 #define PROGRAM_NUMBER     4       // Teacher assigned program number
-#define TRIANGLE_ALLOC_ERR 1       // Error allocating the triangle name 
-#define SQUARE_ALLOC_ERR   2       // Error allocating the square name
 #define RECT_ALLOC_ERR     3       // Error allocating the rectangle name
+#define SQUARE_ALLOC_ERR   2       // Error allocating the square name
+#define TRIANGLE_ALLOC_ERR 1       // Error allocating the triangle name
 
 //**********************************************************************
 //*                       Base Class Definition                        *
