@@ -78,7 +78,7 @@ public:
    // Create a square from a circle
    square create_square_from_circle(circle my_circle);
    // Calculate the ratio of the square's area to the circle's area
-   friend float calculate_ratio(square my_square, circle my_circle);
+   friend void calculate_ratio(square my_square, circle my_circle);
    // Print the square's specifications
    void show_shape();
 };
@@ -104,7 +104,7 @@ public:
    // Create a square from a circle
    friend square square::create_square_from_circle(circle my_circle);
    // Calculate the ratio of the square's area to the circle's area
-   friend float calculate_ratio(square my_square, circle my_circle);
+   friend void calculate_ratio(square my_square, circle my_circle);
    // Print the circle's specifications
    void show_shape();
 };
@@ -115,8 +115,8 @@ public:
 circle::circle(float new_diameter)
 {
    diameter      = new_diameter;
-   area          =            diameter * 4.0f * PI;
-   circumference = diameter * diameter * .25f * PI;
+   area          = diameter * diameter * 0.25f * PI;
+   circumference = diameter * PI;
 }
 
 //**********************************************************************
@@ -142,10 +142,11 @@ square square::create_square_from_circle(circle my_circle)
 //**********************************************************************
 void circle::show_shape()
 {
-   cout << "\n\nSpecifications of the circle:";
-   cout << "\n        Diameter: " << diameter;
-   cout << "\n   Circumference: " << circumference;
-   cout << "\n            Area: " << area;
+   cout << "\n\nThe circle's specifications are:";
+   cout <<   "\n--------------------------------";
+   cout <<   "\n        Diameter: " << diameter;
+   cout <<   "\n   Circumference: " << circumference;
+   cout <<   "\n            Area: " << area;
 }
 
 //**********************************************************************
@@ -153,10 +154,11 @@ void circle::show_shape()
 //**********************************************************************
 void square::show_shape()
 {
-   cout << "\n\nSpecifications of the square:";
-   cout << "\n        Side: " << side;
-   cout << "\n   Perimeter: " << perimeter;
-   cout << "\n        Area: " << area;
+   cout << "\n\nThe square's specifications are:";
+   cout <<   "\n--------------------------------";
+   cout <<   "\n        Side: " << side;
+   cout <<   "\n   Perimeter: " << perimeter;
+   cout <<   "\n        Area: " << area;
 }
 
 //**********************************************************************
@@ -164,7 +166,7 @@ void square::show_shape()
 //**********************************************************************
 void   print_heading();
    // Print the program heading
-float  calculate_ratio(square my_square, circle my_circle);
+void  calculate_ratio(square my_square, circle my_circle);
    // Calculate the ratio of a square's area to a circle's area
 circle get_circle();
    // Asks for a diameter and returns a circle with that diameter
@@ -193,15 +195,14 @@ int main()
       my_square.show_shape();
 
       // Calculate and print the square to circle ratio
-      cout << "\nThe perimeter and circumference is " 
-                                             << my_circle.get_circumference();
-      cout << "\nThe area of the circle is " << my_circle.get_area();
-      cout << "\nThe area of the square is " << my_square.get_area();
-      cout << "\nThe ratio of the square's area to the circle's area is "
-                                             << calculate_ratio(my_square, my_circle);
+      calculate_ratio(my_square, my_circle);
    }
    // Say goodbye and terminate
-   cout << "Thanks for finding the ratio.";
+   cout << "\n\n  Goodbye, and I hope you learned something about the";
+   cout <<   "\n ratio of the area of a square to the area of a circle,";
+   cout <<   "\n where the perimeter of the square is exactly equal to";
+   cout <<   "\n            the circumference of the circle.";
+   cout << "\n\n\n\n\n\n\n";
    return 0;
 }
 
@@ -210,20 +211,23 @@ int main()
 //**********************************************************************
 void print_heading()
 {
-   cout << "\n\n\n\n\n\n\n  " << COURSE_NUMBER
-        << " "                << COURSE_NAME
-        << " - Program "      << PROGRAM_NUMBER;
-   cout << "\n\n   The specifications of straight-sided geometric shapes";
-   cout <<   "\n   =====================================================";
+   cout << "\n\n\n\n\n\n\n        " << COURSE_NUMBER
+        << " "                      << COURSE_NAME
+        << " - Program "            << PROGRAM_NUMBER;
+   cout << "\n        =====================================================";
    return;
 }
 
 //**********************************************************************
 //*      Calculate the ratio of a square's area to a circle's area     *
 //**********************************************************************
-float calculate_ratio(square my_square, circle my_circle)
+void calculate_ratio(square my_square, circle my_circle)
 {
-   return my_square.area / my_circle.area;
+   cout << "\n\nRatio of the square's area to the circle's area is:";
+   cout <<   "\n---------------------------------------------------";
+   cout <<   "\n               <**** "
+        <<   my_square.area / my_circle.area
+        <<   " ****>";
 }
 
 //**********************************************************************
@@ -234,12 +238,14 @@ circle get_circle()
    float input;
    do
    {
-      cout << "\nPlease choose a diameter greater than " 
-                     << MINIMUM_DIAMETER
-           << " or " << QUIT_DIAMETER << " to quit: ";
+      cout << "\n\n\nEnter a circle diameter greater than "
+                      << MINIMUM_DIAMETER
+           << " (or " << QUIT_DIAMETER << " to quit): ";
       cin  >> input;
       if (input < MINIMUM_DIAMETER && input != QUIT_DIAMETER)
-         cout << "\n" << input << " is an invalid diameter.";
+         cout << "\n      Invalid: diameter must be greater than"
+                         << MINIMUM_DIAMETER
+              << " (or " << QUIT_DIAMETER << " to quit).";
    } while (input < MINIMUM_DIAMETER && input != QUIT_DIAMETER);
    return input;
 }
